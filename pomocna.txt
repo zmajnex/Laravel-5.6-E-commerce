@@ -1,0 +1,17 @@
+
+{
+    "protocol": "sftp",
+    "host": "192.168.0.16",
+    "username": "zmajnex",
+    "password": "root",
+    "remotePath": "/var/www/html/ecom",
+    "syncMode": "full",
+    "uploadOnSave": true,
+    
+    "watcher":{
+        "autoUpload":true,
+        "autoDelete":true
+    }
+       
+}
+konfiguracija sftp-a
