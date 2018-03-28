@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);.red {
-  color: #e70a0a;
+  color: rgb(231, 10, 10);
   font-family: 'Times New Roman', Times, serif;
   font-weight: 600;
 }
@@ -14,9 +14,13 @@
   height:30px;
 }
 .cart-counter{
-  background:red;
- /*border-radius: 50%;*/
-  /*border-radius: 30px/10px;*/
+ 
+  background:
+        
+        rgba(243, 5, 5, 0.8)
+        ;
+ border-radius: 25% ;
+  
   padding:4px;
   font-weight: 600;
  margin-left:5px
