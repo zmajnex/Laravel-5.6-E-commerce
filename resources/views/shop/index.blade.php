@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.masterapp')
 @section('title')
 Products
 @endsection

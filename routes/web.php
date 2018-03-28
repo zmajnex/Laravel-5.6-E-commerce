@@ -14,5 +14,12 @@
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-Route::view('/','home');
+Route::view('/','index');
 Route::view('/products','shop.index');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
