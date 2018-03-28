@@ -25,6 +25,14 @@
                 @guest
                     <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                     <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                    {{--Shoping cart--}}
+                    <li class="nav-item active  ">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                            <span class="cart-counter" >0</span>
+                        </a>
+                    </li>
+                    {{-- End Of Shoping cart--}}
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
