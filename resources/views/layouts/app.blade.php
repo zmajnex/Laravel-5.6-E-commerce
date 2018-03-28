@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('css/fontawesome-all.min.css')}}">
     <script src="{{asset('js/app.js')}}"></script>
-    <title>Admin panel</title>
+    <title>@yield('title')</title>
 </head>
 <body>
         <!--Navbar-->

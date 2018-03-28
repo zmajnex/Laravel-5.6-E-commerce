@@ -15,3 +15,4 @@
     return view('welcome');
 });*/
 Route::view('/','home');
+Route::view('/products','shop.index');

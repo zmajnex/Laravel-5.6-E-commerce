@@ -1,6 +1,9 @@
 @extends('layouts.app')
 {{--@extends('layouts.navbar')--}}
 {{--@extends('layouts.footer')--}}
+@section('title')
+Home page
+@endsection
 @section('main-content')
 
 <div class="container mt-2">
