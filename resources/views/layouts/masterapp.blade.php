@@ -17,7 +17,8 @@
         @include('inc.messages') 
                        
         @yield('main-content')
-        @yield('login-content') 
+        @yield('login-content')
+        @yield('login-msg') 
     
 </body>
 </html>
