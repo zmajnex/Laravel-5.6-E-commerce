@@ -18,6 +18,7 @@ Route::view('/','index');
 Route::get('/products','ProductController@getIndex')->name('products.index')/*->middleware('auth')*/;
 Route::get('/add-to-cart/{id}','ProductController@getAddToCart')->name('products.addToCart');
 Route::get('/shopping-cart','ProductController@getCart')->name('product.shoppingCart');
+Route::get('/reduce/{id}','ProductController@getReduce')->name('product.reduce');
 //Login and register routes
 Auth::routes();
 //

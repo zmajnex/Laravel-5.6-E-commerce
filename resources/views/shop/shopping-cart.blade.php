@@ -7,9 +7,20 @@ Shopping cart
 <div class="container mt-2">
         <h1 class="red">Your shopping Cart</h1>
         @foreach ($products as $product )
-        <p>Product:{{$product['item']['title']}}</p> 
-      
-        <p> Price:{{$product['price']}}</p> 
+        <p>Product: {{$product['item']['title']}}</p> 
+         <p>Quantity: {{$product['qty']}}
+                <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Remove
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item  " href="{{route('product.reduce',['id'=>$product['item']['id']])}}">Remove one</a>
+                          <a class="dropdown-item " href="#">Remove all</a>
+                         
+                        </div>
+                      </div>     
+        </p>
+        <p> Price: {{$product['price']}}</p> 
         <hr>
         @endforeach
         <p> Total price:{{$totalPrice}}</p>
