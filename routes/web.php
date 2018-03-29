@@ -15,8 +15,8 @@
     return view('welcome');
 });*/
 Route::view('/','index');
-Route::get('/products','ProductsController@getIndex')->name('products.index')/*->middleware('auth')*/;
-Route::get('/add-to-cart/{id}',' ProductsController@getAddToCart')->name('products.addToCart');
+Route::get('/products','ProductController@getIndex')->name('products.index')/*->middleware('auth')*/;
+Route::get('/add-to-cart/{id}','ProductController@getAddToCart')->name('products.addToCart');
 //Login and register routes
 Auth::routes();
 //

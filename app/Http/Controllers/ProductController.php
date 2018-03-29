@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\ProductsController;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 use App\Product;
 use Session;
 use App\Cart;
-class ProductsController extends Controller
+class ProductController extends Controller
 {
     //
    /* public function __construct()
@@ -24,7 +24,7 @@ class ProductsController extends Controller
         $cart = new Cart($oldCart);
         $cart->add($product, $product->id);
         $request->session()->put('cart',$cart);
-        dd($request->session()->get('cart'));
+        dd($request->session()->get('cart'),'Product Added');
         return redirect()->route('products.index');
     }
 }
