@@ -19,6 +19,7 @@ Route::get('/products','ProductController@getIndex')->name('products.index')/*->
 Route::get('/add-to-cart/{id}','ProductController@getAddToCart')->name('products.addToCart');
 Route::get('/shopping-cart','ProductController@getCart')->name('product.shoppingCart');
 Route::get('/reduce/{id}','ProductController@getReduce')->name('product.reduce');
+Route::get('/remove/{id}','ProductController@getRemoveItem')->name('product.remove');
 //Login and register routes
 Auth::routes();
 //

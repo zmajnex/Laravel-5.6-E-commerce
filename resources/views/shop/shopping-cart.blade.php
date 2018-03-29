@@ -15,7 +15,7 @@ Shopping cart
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <a class="dropdown-item  " href="{{route('product.reduce',['id'=>$product['item']['id']])}}">Remove one</a>
-                          <a class="dropdown-item " href="#">Remove all</a>
+                          <a class="dropdown-item " href="{{route('product.remove',['id'=>$product['item']['id']])}}">Remove all</a>
                          
                         </div>
                       </div>     
@@ -26,7 +26,10 @@ Shopping cart
         <p> Total price:{{$totalPrice}}</p>
     </div>
 @else
-Cart is empty!
+<div class="container  mt-4 alert alert-danger">
+        Cart is empty!
+</div>
+
 @endif
 
 
