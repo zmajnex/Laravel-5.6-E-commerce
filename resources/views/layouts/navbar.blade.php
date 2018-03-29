@@ -28,8 +28,14 @@
                     {{--Shoping cart--}}
                     <li class="nav-item active  ">
                         <a class="nav-link" href="#">
-                            <i class="fas fa-shopping-cart fa-lg"></i>
-                            <span class="cart-counter" >0</span>
+                            <i class="fas fa-shopping-cart fa-lg">
+                                {{--Shoping cart display--}}
+                                 <span class="badge bg-danger" >
+                                     {{Session::has('cart')? Session::get('cart')->totalQty :'0' }}
+                                 </span>
+                            </i>
+                            
+                            
                         </a>
                     </li>
                     {{-- End Of Shoping cart--}}
