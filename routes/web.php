@@ -16,11 +16,11 @@
 });*/
 Route::view('/','index');
 Route::get('/products','ProductsController@getIndex')->name('products.index')/*->middleware('auth')*/;
-
+Route::get('/add-to-cart/{id}',' ProductsController@getAddToCart')->name('products.addToCart');
 //Login and register routes
 Auth::routes();
 //
-Route::get('/add-to-cart/{id}',' ProductController@getAddToCart')->name('product.addToCart');
+
 
 
 

@@ -20,7 +20,7 @@ Products
               <h2 class="card-title text-center">{{$product->title}}</h2>
               <p class="card-text">{{$product->description}}</p>
               <p><b>price: <span class="text-danger">{{$product->price}}</span> $</b></p>
-              <button class="btn btn-primary">Add to cart</button>
+              <a href="{{route('products.addToCart',['id'=>$product->id])}}" class="btn btn-primary text-white">Add to cart</a>
             </div>
       </div>
    @endforeach

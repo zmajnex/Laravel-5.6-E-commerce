@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\ProductsController;
 
 use Illuminate\Http\Request;
+
 use App\Product;
+use Session;
+use App\Cart;
 class ProductsController extends Controller
 {
     //
@@ -16,7 +19,12 @@ class ProductsController extends Controller
         return view('shop.index')->with('products',$products);
     }
     public function getAddToCart(Request $request, $id){
-        $products = Product::find($id);
-        
+        $product = Product::find($id);
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->add($product, $product->id);
+        $request->session()->put('cart',$cart);
+        dd($request->session()->get('cart'));
+        return redirect()->route('products.index');
     }
 }
