@@ -17,9 +17,10 @@
 Route::view('/','index');
 Route::get('/products','ProductsController@getIndex')->name('products.index')/*->middleware('auth')*/;
 
-
+//Login and register routes
 Auth::routes();
+//
+Route::get('/add-to-cart/{id}',' ProductController@getAddToCart')->name('product.addToCart');
 
-Route::get('/home', 'HomeController@index')->name('home'); 
 
 

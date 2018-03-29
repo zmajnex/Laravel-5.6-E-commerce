@@ -15,4 +15,8 @@ class ProductsController extends Controller
         $products = Product::all();
         return view('shop.index')->with('products',$products);
     }
+    public function getAddToCart(Request $request, $id){
+        $products = Product::find($id);
+        
+    }
 }
