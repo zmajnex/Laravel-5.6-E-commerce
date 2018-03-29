@@ -24,7 +24,9 @@ Shopping cart
         <hr>
         @endforeach
         <p> Total price:{{$totalPrice}}</p>
+        <a href="{{route('checkout.page')}}" class="btn btn-success">Checkout</a>
     </div>
+    
 @else
 <div class="container  mt-4 alert alert-danger">
         Cart is empty!
