@@ -26,7 +26,7 @@ Shopping cart
         <p> Total price:{{$totalPrice}}</p>
     </div>
 @else
-Korpa je prazna!
+Cart is empty!
 @endif
 
 
