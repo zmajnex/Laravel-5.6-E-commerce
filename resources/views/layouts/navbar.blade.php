@@ -27,7 +27,7 @@
                     <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                     {{--Shoping cart--}}
                     <li class="nav-item active  ">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('product.shoppingCart')}}">
                             <i class="fas fa-shopping-cart fa-lg">
                                 {{--Shoping cart display--}}
                                  <span class="badge bg-danger" >
