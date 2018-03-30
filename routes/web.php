@@ -23,7 +23,7 @@ Route::get('/shopping-cart','ProductController@getCart')->name('product.shopping
 Route::get('/reduce/{id}','ProductController@getReduce')->name('product.reduce');
 Route::get('/remove/{id}','ProductController@getRemoveItem')->name('product.remove');
 Route::get('/checkout','ProductController@getCheckout')->name('checkout.page');
-Route::post('checkout', 'ProductController@getCheckout')->name('checkout');
+Route::post('checkout', 'ProductController@postCheckout')->name('checkout');
 //Login and register routes
 
 
